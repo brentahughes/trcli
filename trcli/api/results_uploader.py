@@ -146,6 +146,8 @@ class ResultsUploader:
                 f"Submitted {results_amount} test results in {stop - start:.1f} secs."
             )
 
+        self.environment.log(f"Run ID: {run_id}")
+
     def get_suite_id(self, project_id: int, suite_mode: int) -> Tuple[int, int]:
         """
         Gets and checks suite ID for specified project_id.
